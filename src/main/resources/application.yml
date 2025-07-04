@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: byte-history-api
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
