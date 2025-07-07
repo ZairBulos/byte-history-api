@@ -60,4 +60,8 @@ public class RateLimitFilter extends OncePerRequestFilter {
                 request.getRequestURI()
         ));
     }
+
+    public void clearCache() {
+        cache.clear();
+    }
 }
