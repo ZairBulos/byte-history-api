@@ -2,6 +2,7 @@ package com.bytehistory;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -16,5 +17,6 @@ import java.lang.annotation.Target;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.yml")
+@ActiveProfiles("test")
 public @interface TestConfig {
 }
