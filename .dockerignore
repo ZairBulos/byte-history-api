@@ -1,0 +1,15 @@
+target/
+
+.idea/
+
+.git/
+.gitignore
+.gitattributes
+
+.env
+.env.example
+
+Dockerfile
+docker-compose.yml
+
+README.md
