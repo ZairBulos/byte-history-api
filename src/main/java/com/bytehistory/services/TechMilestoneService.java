@@ -17,7 +17,6 @@ public class TechMilestoneService {
     @Cacheable("techMilestone")
     @Transactional(readOnly = true)
     public TechMilestoneResponse get() {
-        System.out.println("Service called");
         return repository.findTodayMilestone()
                 .map(m -> new TechMilestoneResponse(m.getMilestone(), m.getAiModel(), DateUtils.getCurrentDate()))
                 .orElseThrow(NotFoundException::new);
