@@ -6,6 +6,4 @@ spring:
     password: postgres
 
   jpa:
-    hibernate:
-      ddl-auto: none
     show-sql: true

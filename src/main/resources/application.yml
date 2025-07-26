@@ -7,6 +7,10 @@ spring:
     default-property-inclusion: non_null
   cache:
     type: simple
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
 
 server:
   port: 8080
