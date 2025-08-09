@@ -10,6 +10,9 @@ import java.util.Optional;
 @Repository
 public interface TechMilestoneRepository extends JpaRepository<TechMilestone, Long> {
 
-    @Query(value = "SELECT * FROM tech_milestones WHERE CAST(created_at AS DATE) = CURRENT_DATE", nativeQuery = true)
+    @Query(
+            value = "SELECT * FROM tech_milestones WHERE CAST(created_at AS DATE) = CURRENT_DATE ORDER BY created_at DESC LIMIT 1",
+            nativeQuery = true
+    )
     Optional<TechMilestone> findTodayMilestone();
 }
