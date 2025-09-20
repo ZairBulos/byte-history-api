@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class DateUtils {
 
-    private static final Locale SPANISH = new Locale("es", "ES");
+    private static final Locale SPANISH = Locale.of("es", "ES");
 
     /**
      * Returns the current date in the format "day of week, day of month of year".
